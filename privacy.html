@@ -18,40 +18,177 @@
 
     <section class="card">
       <h1>Privacy Policy</h1>
-      <p class="muted">Last updated: 2026-03-31</p>
-      <p>
-        This policy describes how OpenBookLM handles user data.
-      </p>
+      <p class="muted">Last updated: 2026-05-05</p>
+      <p>This policy explains how OpenBookLM handles local Vault documents, document translation, chat content, provider sign-in, local credentials, and iPad advertising.</p>
+      <p class="language-nav"><a href="#en">English</a><a href="#ko">한국어</a><a href="#ja">日本語</a><a href="#es">Español</a><a href="#de">Deutsch</a><a href="#fr">Français</a></p>
     </section>
 
-    <section class="card">
+    <section class="card" id="en">
       <h2>English</h2>
+      <h3>Local data</h3>
       <ul>
-        <li>OpenBookLM processes selected note files locally on the device for indexing and retrieval.</li>
-        <li>When you use a cloud provider mode (for example, OpenAI API or Sign in with ChatGPT on macOS), your prompt and selected context may be transmitted to that provider to generate a response.</li>
-        <li>When you use Local API mode, prompts and context are sent to your configured local/OpenAI-compatible endpoint.</li>
-        <li>The app may store local app data such as session history, settings, and vault index metadata on your device.</li>
-        <li>Authentication credentials are stored in the system Keychain where applicable.</li>
-        <li>The app developer does not sell personal data.</li>
+        <li>OpenBookLM processes user-selected Vault documents locally for text extraction, indexing, retrieval, source opening, text/Markdown editing where supported, citations, reference review, and document translation.</li>
+        <li>Supported extraction formats include <code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code>, and <code>.hwpx</code>. Rich formats are opened as read-only extracted text previews, so layout, images, and complex tables may not be preserved.</li>
+        <li>Document translation creates a new app-managed translated file and does not overwrite the original. Generated translations may be stored locally and can be renamed or exported by the user.</li>
+        <li>The app may store settings, chat sessions, session scope preferences, vault connection data, security-scoped bookmarks, note metadata, translation metadata, and vault index metadata on your device.</li>
+        <li>OpenBookLM does not operate a developer-hosted sync server for your notes, indexes, generated translations, or chat sessions.</li>
       </ul>
-      <p>
-        Contact: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a>
-      </p>
+      <h3>Provider modes</h3>
+      <ul>
+        <li>When Vault Search is enabled, relevant local note context may be included in the prompt sent to the selected generation provider.</li>
+        <li>Apple On-Device / Foundation Models mode handles prompts, responses, and document translation segments on device through Apple's on-device model path.</li>
+        <li>ChatGPT Browser Sign-In, OpenAI-compatible API, and other cloud-backed modes may transmit prompts, chat context, and selected note context to that provider. Local API mode sends prompts and context to the endpoint you configure.</li>
+        <li>Third-party providers process submitted data under their own privacy policies and terms.</li>
+      </ul>
+      <h3>Credentials, ads, retention</h3>
+      <ul>
+        <li>Credentials, API keys, and provider tokens are stored in the system Keychain where applicable and can be replaced or removed from provider settings or by clearing local data.</li>
+        <li>The iPad version may display Google AdMob banner ads. Google Mobile Ads SDK may process data such as approximate location derived from IP address, device identifiers, diagnostics, performance data, advertising data, and ad interaction data under Google's policies. The macOS version does not include AdMob.</li>
+        <li>Where required, the iPad version requests ad consent through Google's User Messaging Platform and provides Privacy &amp; Compliance settings.</li>
+        <li>Local app data remains on your device until you delete it through app controls or remove the app. Support emails are retained only as needed to respond, keep support history, or meet applicable obligations.</li>
+        <li>The developer does not sell personal data. For deletion or consent-withdrawal requests involving developer-managed support records, contact support from the email address used for the original request.</li>
+      </ul>
+      <p>Contact: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
     </section>
 
-    <section class="card">
+    <section class="card" id="ko">
       <h2>한국어</h2>
+      <h3>로컬 데이터</h3>
       <ul>
-        <li>OpenBookLM은 사용자가 선택한 노트 파일을 기기 내에서 로컬 인덱싱/검색 처리합니다.</li>
-        <li>클라우드 제공자 모드(예: OpenAI API, macOS의 Sign in with ChatGPT)를 사용할 경우, 답변 생성을 위해 프롬프트 및 선택된 컨텍스트가 해당 제공자에 전송될 수 있습니다.</li>
-        <li>Local API 모드를 사용할 경우, 프롬프트 및 컨텍스트는 사용자가 설정한 로컬/OpenAI 호환 엔드포인트로 전송됩니다.</li>
-        <li>앱은 세션 기록, 설정, 볼트 인덱스 메타데이터 등 로컬 앱 데이터를 기기에 저장할 수 있습니다.</li>
-        <li>인증 자격정보는 가능한 경우 시스템 Keychain에 저장됩니다.</li>
-        <li>개발자는 개인정보를 판매하지 않습니다.</li>
+        <li>OpenBookLM은 사용자가 선택한 Vault 문서를 기기 내에서 텍스트 추출, 인덱싱, 검색, 원문 열기, 지원되는 텍스트/Markdown 편집, 인용, 참조 검토, 문서 번역을 위해 처리합니다.</li>
+        <li>지원 추출 형식은 <code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code>, <code>.hwpx</code>입니다. 서식 있는 문서는 읽기 전용 추출 텍스트 미리보기로 열리며 레이아웃, 이미지, 복잡한 표는 보존되지 않을 수 있습니다.</li>
+        <li>문서 번역은 원본을 덮어쓰지 않고 앱이 관리하는 새 번역 파일을 만듭니다. 생성된 번역본은 로컬에 저장될 수 있으며 사용자가 이름을 바꾸거나 내보낼 수 있습니다.</li>
+        <li>앱은 설정, 채팅 세션, 세션 범위 설정, Vault 연결 정보, 보안 범위 북마크, 노트 메타데이터, 번역 메타데이터, Vault 인덱스 메타데이터를 기기에 저장할 수 있습니다.</li>
+        <li>OpenBookLM은 노트, 인덱스, 번역본, 채팅 세션을 동기화하는 개발자 운영 서버를 제공하지 않습니다.</li>
       </ul>
-      <p>
-        문의: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a>
-      </p>
+      <h3>Provider 모드</h3>
+      <ul>
+        <li>Vault 검색이 켜져 있으면 관련 로컬 노트 컨텍스트가 선택한 생성 Provider에 보내는 프롬프트에 포함될 수 있습니다.</li>
+        <li>Apple 온디바이스 / Foundation Models 모드는 프롬프트, 응답, 문서 번역 조각을 Apple의 온디바이스 모델 경로에서 처리합니다.</li>
+        <li>ChatGPT 브라우저 로그인, OpenAI 호환 API, 기타 클라우드 기반 모드는 프롬프트, 채팅 컨텍스트, 선택 노트 컨텍스트를 해당 Provider로 전송할 수 있습니다. Local API 모드는 사용자가 설정한 엔드포인트로 전송합니다.</li>
+        <li>제3자 Provider는 제출된 데이터를 각자의 개인정보 처리방침과 약관에 따라 처리합니다.</li>
+      </ul>
+      <h3>자격정보, 광고, 보관</h3>
+      <ul>
+        <li>자격정보, API Key, Provider token은 가능한 경우 시스템 Keychain에 저장되며 Provider 설정 또는 로컬 데이터 삭제로 교체하거나 제거할 수 있습니다.</li>
+        <li>iPad 버전은 Google AdMob 배너 광고를 표시할 수 있습니다. Google Mobile Ads SDK는 Google 정책에 따라 IP 기반 대략적 위치, 기기 식별자, 진단, 성능 데이터, 광고 데이터, 광고 상호작용 데이터를 처리할 수 있습니다. macOS 버전에는 AdMob이 포함되지 않습니다.</li>
+        <li>필요한 경우 iPad 버전은 Google User Messaging Platform으로 광고 동의를 요청하고 Privacy &amp; Compliance 설정을 제공합니다.</li>
+        <li>로컬 앱 데이터는 사용자가 앱 기능으로 삭제하거나 앱을 제거할 때까지 기기에 보관됩니다. 지원 이메일은 문의 응답, 지원 이력 유지, 적용 가능한 의무 준수에 필요한 범위에서만 보관됩니다.</li>
+        <li>개발자는 개인정보를 판매하지 않습니다. 개발자 관리 지원 기록의 삭제 또는 동의 철회 요청은 기존 문의에 사용한 이메일 주소로 보내주세요.</li>
+      </ul>
+      <p>문의: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
+    </section>
+
+    <section class="card" id="ja">
+      <h2>日本語</h2>
+      <h3>ローカルデータ</h3>
+      <ul>
+        <li>OpenBookLM は、ユーザーが選択した Vault 文書を、テキスト抽出、インデックス作成、検索、原文表示、対応形式でのテキスト/Markdown 編集、引用、参照確認、文書翻訳のために端末内で処理します。</li>
+        <li>対応形式は <code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code>, <code>.hwpx</code> です。リッチ形式は読み取り専用の抽出テキストプレビューとして開かれ、レイアウト、画像、複雑な表は保持されない場合があります。</li>
+        <li>文書翻訳は元文書を上書きせず、アプリ管理の新しい翻訳ファイルを作成します。生成された翻訳はローカルに保存され、名前変更または書き出しできます。</li>
+        <li>アプリは、設定、チャットセッション、セッション範囲設定、Vault 接続情報、セキュリティスコープ付きブックマーク、ノートメタデータ、翻訳メタデータ、Vault インデックスメタデータを端末に保存する場合があります。</li>
+        <li>OpenBookLM は、ノート、インデックス、翻訳、チャットセッションを同期する開発者運営サーバーを提供していません。</li>
+      </ul>
+      <h3>Provider モード</h3>
+      <ul>
+        <li>Vault Search が有効な場合、関連するローカルノートのコンテキストが選択中の Provider へ送るプロンプトに含まれることがあります。</li>
+        <li>Apple On-Device / Foundation Models は、プロンプト、応答、文書翻訳セグメントを Apple のオンデバイスモデル経路で処理します。</li>
+        <li>ChatGPT Browser Sign-In、OpenAI 互換 API、その他クラウド Provider では、プロンプト、チャットコンテキスト、選択ノートコンテキストが Provider に送信される場合があります。Local API は設定したエンドポイントへ送信します。</li>
+        <li>第三者 Provider は送信データを各社のプライバシーポリシーと規約に従って処理します。</li>
+      </ul>
+      <h3>認証情報、広告、保持</h3>
+      <ul>
+        <li>認証情報、API キー、Provider トークンは可能な場合はシステム Keychain に保存され、Provider 設定またはローカルデータ削除で置換・削除できます。</li>
+        <li>iPad 版では Google AdMob バナー広告が表示される場合があります。Google Mobile Ads SDK は Google のポリシーに従い、IP に基づくおおよその位置、端末識別子、診断、パフォーマンスデータ、広告データ、広告操作データを処理する場合があります。macOS 版には AdMob は含まれません。</li>
+        <li>必要な場合、iPad 版は Google User Messaging Platform で広告同意を求め、Privacy &amp; Compliance 設定を提供します。</li>
+        <li>ローカルアプリデータは、ユーザーがアプリ内機能で削除するかアプリを削除するまで端末に保持されます。サポートメールは問い合わせ対応、履歴維持、適用義務に必要な範囲でのみ保持されます。</li>
+        <li>開発者は個人データを販売しません。開発者管理のサポート記録に関する削除または同意撤回は、元の問い合わせアドレスから連絡してください。</li>
+      </ul>
+      <p>Contact: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
+    </section>
+
+    <section class="card" id="es">
+      <h2>Español</h2>
+      <h3>Datos locales</h3>
+      <ul>
+        <li>OpenBookLM procesa en el dispositivo los documentos de Vault seleccionados para extracción de texto, indexación, búsqueda, apertura de fuentes, edición de texto/Markdown cuando corresponda, citas, revisión de referencias y traducción.</li>
+        <li>Los formatos compatibles son <code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code> y <code>.hwpx</code>. Los formatos enriquecidos se abren como vistas de texto extraído de solo lectura, por lo que diseño, imágenes y tablas complejas pueden no conservarse.</li>
+        <li>La traducción crea un archivo traducido nuevo gestionado por la app y no sobrescribe el original. Puede guardarse localmente, renombrarse o exportarse.</li>
+        <li>La app puede guardar ajustes, sesiones de chat, preferencias de sesión, datos de conexión de Vault, marcadores con permisos, metadatos de notas, traducciones e índice en el dispositivo.</li>
+        <li>OpenBookLM no opera un servidor de sincronización del desarrollador para notas, índices, traducciones o chats.</li>
+      </ul>
+      <h3>Modos de Provider</h3>
+      <ul>
+        <li>Con Vault Search activado, el contexto local relevante puede incluirse en el prompt enviado al Provider seleccionado.</li>
+        <li>Apple On-Device / Foundation Models procesa prompts, respuestas y segmentos de traducción en el dispositivo mediante la ruta de modelo de Apple.</li>
+        <li>ChatGPT Browser Sign-In, API compatible con OpenAI y otros modos en la nube pueden enviar prompts, contexto de chat y notas seleccionadas al Provider. Local API envía datos al endpoint configurado.</li>
+        <li>Los Providers de terceros procesan los datos enviados según sus propias políticas y términos.</li>
+      </ul>
+      <h3>Credenciales, anuncios y conservación</h3>
+      <ul>
+        <li>Credenciales, claves API y tokens se guardan en Keychain cuando corresponde y pueden reemplazarse o eliminarse desde ajustes o borrando datos locales.</li>
+        <li>La versión iPad puede mostrar banners Google AdMob. Google Mobile Ads SDK puede procesar ubicación aproximada por IP, identificadores, diagnósticos, rendimiento, datos publicitarios e interacción con anuncios según las políticas de Google. La versión macOS no incluye AdMob.</li>
+        <li>Cuando sea necesario, iPad solicita consentimiento mediante Google User Messaging Platform y ofrece ajustes Privacy &amp; Compliance.</li>
+        <li>Los datos locales permanecen hasta que el usuario los borra o elimina la app. Los correos de soporte se conservan solo para responder, mantener historial o cumplir obligaciones aplicables.</li>
+        <li>El desarrollador no vende datos personales. Para eliminación o retirada de consentimiento sobre registros de soporte gestionados por el desarrollador, escriba desde el correo original.</li>
+      </ul>
+      <p>Contacto: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
+    </section>
+
+    <section class="card" id="de">
+      <h2>Deutsch</h2>
+      <h3>Lokale Daten</h3>
+      <ul>
+        <li>OpenBookLM verarbeitet ausgewählte Vault-Dokumente lokal für Textextraktion, Indexierung, Suche, Quellenanzeige, unterstützte Text/Markdown-Bearbeitung, Zitate, Referenzprüfung und Dokumentübersetzung.</li>
+        <li>Unterstützte Formate sind <code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code> und <code>.hwpx</code>. Rich-Formate werden als schreibgeschützte Textvorschau geöffnet; Layout, Bilder und komplexe Tabellen bleiben möglicherweise nicht erhalten.</li>
+        <li>Die Übersetzung erstellt eine neue appverwaltete Datei und überschreibt das Original nicht. Sie kann lokal gespeichert, umbenannt oder exportiert werden.</li>
+        <li>Die App kann Einstellungen, Chatsitzungen, Sitzungspräferenzen, Vault-Verbindungsdaten, Security-Scoped Bookmarks, Notizmetadaten, Übersetzungsmetadaten und Indexmetadaten auf dem Gerät speichern.</li>
+        <li>OpenBookLM betreibt keinen entwicklerseitigen Sync-Server für Notizen, Indizes, Übersetzungen oder Chats.</li>
+      </ul>
+      <h3>Provider-Modi</h3>
+      <ul>
+        <li>Bei aktivem Vault Search kann relevanter lokaler Kontext in den Prompt an den ausgewählten Provider aufgenommen werden.</li>
+        <li>Apple On-Device / Foundation Models verarbeitet Prompts, Antworten und Übersetzungssegmente auf dem Gerät über Apples On-Device-Modellpfad.</li>
+        <li>ChatGPT Browser Sign-In, OpenAI-kompatible API und andere Cloud-Modi können Prompts, Chatkontext und ausgewählten Notizkontext an den Provider senden. Local API sendet Daten an den konfigurierten Endpoint.</li>
+        <li>Drittanbieter verarbeiten übermittelte Daten nach ihren eigenen Datenschutzrichtlinien und Bedingungen.</li>
+      </ul>
+      <h3>Zugangsdaten, Werbung, Aufbewahrung</h3>
+      <ul>
+        <li>Zugangsdaten, API-Schlüssel und Tokens werden soweit möglich im Keychain gespeichert und können in Einstellungen oder durch Löschen lokaler Daten entfernt werden.</li>
+        <li>Die iPad-Version kann Google AdMob-Banner anzeigen. Google Mobile Ads SDK kann nach Google-Richtlinien ungefähre IP-basierte Position, Gerätekennungen, Diagnosen, Leistungsdaten, Werbedaten und Anzeigeninteraktionen verarbeiten. Die macOS-Version enthält kein AdMob.</li>
+        <li>Wo erforderlich, fragt iPad über Google User Messaging Platform nach Werbeeinwilligung und bietet Privacy &amp; Compliance Einstellungen.</li>
+        <li>Lokale Daten bleiben bis zur Löschung durch den Nutzer oder App-Entfernung auf dem Gerät. Support-E-Mails werden nur für Antwort, Supporthistorie oder Pflichten aufbewahrt.</li>
+        <li>Der Entwickler verkauft keine personenbezogenen Daten. Für Löschung oder Widerruf zu entwicklerverwalteten Supportdaten schreiben Sie von der ursprünglichen E-Mail-Adresse.</li>
+      </ul>
+      <p>Kontakt: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
+    </section>
+
+    <section class="card" id="fr">
+      <h2>Français</h2>
+      <h3>Données locales</h3>
+      <ul>
+        <li>OpenBookLM traite localement les documents Vault sélectionnés pour extraction de texte, indexation, recherche, ouverture de sources, édition texte/Markdown prise en charge, citations, vérification des références et traduction.</li>
+        <li>Formats pris en charge: <code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code> et <code>.hwpx</code>. Les formats riches s'ouvrent en aperçu texte en lecture seule; mise en page, images et tableaux complexes peuvent ne pas être conservés.</li>
+        <li>La traduction crée un nouveau fichier géré par l'app et n'écrase pas l'original. Il peut être stocké localement, renommé ou exporté.</li>
+        <li>L'app peut stocker réglages, sessions de chat, préférences de session, données de connexion Vault, signets à portée de sécurité, métadonnées de notes, traductions et index sur l'appareil.</li>
+        <li>OpenBookLM n'exploite pas de serveur de synchronisation développeur pour notes, index, traductions ou chats.</li>
+      </ul>
+      <h3>Modes Provider</h3>
+      <ul>
+        <li>Lorsque Vault Search est activé, un contexte local pertinent peut être inclus dans le prompt envoyé au Provider choisi.</li>
+        <li>Apple On-Device / Foundation Models traite prompts, réponses et segments de traduction sur l'appareil via le modèle embarqué Apple.</li>
+        <li>ChatGPT Browser Sign-In, API compatible OpenAI et autres modes cloud peuvent envoyer prompts, contexte de chat et notes sélectionnées au Provider. Local API envoie les données à l'endpoint configuré.</li>
+        <li>Les Providers tiers traitent les données soumises selon leurs propres politiques et conditions.</li>
+      </ul>
+      <h3>Identifiants, publicités, conservation</h3>
+      <ul>
+        <li>Identifiants, clés API et tokens sont stockés dans Keychain lorsque possible et peuvent être remplacés ou supprimés depuis les réglages ou en effaçant les données locales.</li>
+        <li>La version iPad peut afficher des bannières Google AdMob. Google Mobile Ads SDK peut traiter localisation approximative par IP, identifiants, diagnostics, performances, données publicitaires et interactions avec les annonces selon les politiques de Google. La version macOS n'inclut pas AdMob.</li>
+        <li>Lorsque requis, iPad demande le consentement via Google User Messaging Platform et fournit des réglages Privacy &amp; Compliance.</li>
+        <li>Les données locales restent jusqu'à leur suppression par l'utilisateur ou la suppression de l'app. Les e-mails d'assistance sont conservés uniquement pour répondre, garder l'historique ou respecter des obligations.</li>
+        <li>Le développeur ne vend pas de données personnelles. Pour suppression ou retrait de consentement concernant des dossiers d'assistance gérés par le développeur, écrivez depuis l'e-mail initial.</li>
+      </ul>
+      <p>Contact: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
     </section>
   </main>
 </body>
