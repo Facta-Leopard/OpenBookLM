@@ -18,26 +18,211 @@
 
     <section class="card">
       <h1>Support</h1>
-      <p class="muted">Contact and basic troubleshooting information.</p>
+      <p class="muted">Contact, troubleshooting, document translation notes, file format notes, privacy requests, and iPad ad reports for OpenBookLM.</p>
+      <p class="language-nav"><a href="#en">English</a><a href="#ko">한국어</a><a href="#ja">日本語</a><a href="#es">Español</a><a href="#de">Deutsch</a><a href="#fr">Français</a></p>
     </section>
 
-    <section class="card">
+    <section class="card" id="en">
       <h2>English</h2>
       <p>Email: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
+      <h3>What to include</h3>
       <ul>
-        <li>Include your app version and platform (macOS/iPadOS/visionOS compatibility mode).</li>
-        <li>If login fails, include provider mode (OpenAI API, Local API, or Codex OAuth on macOS).</li>
-        <li>If vault indexing fails, include file type and a short reproduction step.</li>
+        <li>App version, platform, selected language, and provider mode.</li>
+        <li>For Vault Search issues, include whether search was on, which Vault was connected, and short reproduction steps.</li>
+        <li>For document translation issues, include source file type, target language, output format, and the exact error text.</li>
+      </ul>
+      <h3>Troubleshooting</h3>
+      <ul>
+        <li>Reindex the Vault if supported files are not found.</li>
+        <li>Turn Vault Search off for general chatbot behavior.</li>
+        <li>For Apple On-Device / Foundation Models, confirm device, OS, region, language, and Apple settings support the feature.</li>
+        <li>For ChatGPT Browser Sign-In, OpenAI-compatible API, or Local API failures, check credentials, endpoint reachability, and response format.</li>
+        <li>Reconnect the Vault if iPadOS or macOS no longer grants file access after relaunch.</li>
+      </ul>
+      <h3>Document translation and files</h3>
+      <ul>
+        <li>Translation creates a new file and never overwrites the original document.</li>
+        <li>The option screen lets you choose Markdown or plain text output before translation starts.</li>
+        <li>On iPadOS, generated translations may first be saved in the app-managed folder because the system can limit direct writes to external file locations.</li>
+        <li>Apple On-Device / Foundation Models translation is designed to process smaller text segments to reduce context-limit problems.</li>
+        <li>OpenBookLM can index extracted text from <code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code>, and <code>.hwpx</code>. Editing is limited to <code>.txt</code>, <code>.md</code>, and <code>.markdown</code>.</li>
+        <li>PDF, RTF, DOCX, EPUB, and HWPX open as read-only text-focused previews. Original layout, images, complex tables, and scanned PDFs without OCR text may not be preserved or searchable.</li>
+      </ul>
+      <h3>Ads and privacy requests</h3>
+      <ul>
+        <li>The iPad version may show Google AdMob banner ads. The macOS version does not include AdMob.</li>
+        <li>To report an inappropriate ad, email support with a screenshot when possible.</li>
+        <li>Local app data can be cleared from maintenance/reset controls or by deleting the app. For developer-managed support records, email support from the address used for the original request.</li>
       </ul>
     </section>
 
-    <section class="card">
+    <section class="card" id="ko">
       <h2>한국어</h2>
       <p>문의 이메일: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
+      <h3>문의 시 포함할 내용</h3>
       <ul>
-        <li>앱 버전과 플랫폼(macOS/iPadOS/visionOS 호환 모드)을 함께 알려주세요.</li>
-        <li>로그인 오류 시 제공자 모드(OpenAI API, Local API, macOS용 Codex OAuth)를 함께 적어주세요.</li>
-        <li>볼트 인덱싱 오류 시 파일 형식과 재현 절차를 간단히 적어주세요.</li>
+        <li>앱 버전, 플랫폼, 선택한 언어, Provider 모드를 적어주세요.</li>
+        <li>Vault 검색 문제라면 검색 켜짐 여부, 연결한 Vault, 짧은 재현 절차를 알려주세요.</li>
+        <li>문서 번역 문제라면 원본 파일 형식, 대상 언어, 출력 형식, 정확한 오류 문구를 알려주세요.</li>
+      </ul>
+      <h3>문제 확인</h3>
+      <ul>
+        <li>지원 파일이 검색되지 않으면 Vault를 다시 인덱싱해 주세요.</li>
+        <li>일반 챗봇처럼 쓰려면 메시지 전송 전에 Vault 검색을 꺼주세요.</li>
+        <li>Apple 온디바이스 / Foundation Models는 기기, OS, 지역, 언어, Apple 설정이 지원 조건을 만족해야 합니다.</li>
+        <li>ChatGPT 브라우저 로그인, OpenAI 호환 API, Local API 문제는 자격정보, 엔드포인트 접근성, 응답 형식을 확인해 주세요.</li>
+        <li>재실행 후 파일 접근이 끊기면 Vault Connection 화면에서 Vault를 다시 연결해 주세요.</li>
+      </ul>
+      <h3>문서 번역 및 파일</h3>
+      <ul>
+        <li>문서 번역은 새 파일을 만들며 원본 문서를 덮어쓰지 않습니다.</li>
+        <li>번역 시작 전에 옵션 화면에서 Markdown 또는 일반 텍스트 출력 형식을 선택할 수 있습니다.</li>
+        <li>iPadOS에서는 외부 위치 직접 쓰기가 제한될 수 있어 번역본이 먼저 앱 관리 폴더에 저장될 수 있습니다.</li>
+        <li>Apple 온디바이스 / Foundation Models 번역은 컨텍스트 제한 문제를 줄이기 위해 작은 텍스트 조각 단위로 처리하도록 설계되어 있습니다.</li>
+        <li>OpenBookLM은 <code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code>, <code>.hwpx</code> 파일의 추출 텍스트를 인덱싱할 수 있습니다. 편집은 <code>.txt</code>, <code>.md</code>, <code>.markdown</code>만 지원합니다.</li>
+        <li>PDF, RTF, DOCX, EPUB, HWPX는 읽기 전용 텍스트 미리보기로 열립니다. 원본 레이아웃, 이미지, 복잡한 표, OCR 없는 스캔 PDF는 보존 또는 검색이 제한될 수 있습니다.</li>
+      </ul>
+      <h3>광고 및 개인정보 요청</h3>
+      <ul>
+        <li>iPad 버전은 Google AdMob 배너 광고를 표시할 수 있습니다. macOS 버전에는 AdMob이 포함되지 않습니다.</li>
+        <li>부적절한 광고는 가능하면 스크린샷과 함께 지원 이메일로 신고해 주세요.</li>
+        <li>로컬 앱 데이터는 유지보수/초기화 기능 또는 앱 삭제로 지울 수 있습니다. 개발자 관리 지원 기록 요청은 기존 문의에 사용한 이메일로 보내주세요.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="ja">
+      <h2>日本語</h2>
+      <p>お問い合わせ: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
+      <h3>含める情報</h3>
+      <ul>
+        <li>アプリのバージョン、プラットフォーム、選択中の言語、Provider モード。</li>
+        <li>Vault Search の問題では、検索のオン/オフ、接続した Vault、短い再現手順。</li>
+        <li>文書翻訳の問題では、元ファイル形式、対象言語、出力形式、正確なエラーテキスト。</li>
+      </ul>
+      <h3>確認事項</h3>
+      <ul>
+        <li>対応ファイルが見つからない場合は Vault を再インデックスしてください。</li>
+        <li>通常のチャットボットとして使う場合は Vault Search をオフにしてください。</li>
+        <li>Apple On-Device / Foundation Models は、端末、OS、地域、言語、Apple 設定が対応している必要があります。</li>
+        <li>ChatGPT Browser Sign-In、OpenAI 互換 API、Local API の問題では、認証情報、エンドポイント到達性、レスポンス形式を確認してください。</li>
+        <li>再起動後にファイルアクセスが失われた場合は、Vault Connection で Vault を再接続してください。</li>
+      </ul>
+      <h3>文書翻訳とファイル</h3>
+      <ul>
+        <li>翻訳は新しいファイルを作成し、元の文書を上書きしません。</li>
+        <li>開始前に Markdown またはプレーンテキストなどの出力形式を選べます。</li>
+        <li>iPadOS では外部保存先への直接書き込みが制限される場合があり、翻訳はまずアプリ管理フォルダに保存されることがあります。</li>
+        <li>Apple On-Device / Foundation Models 翻訳は、コンテキスト制限を減らすため小さなテキストセグメントで処理する設計です。</li>
+        <li><code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code>, <code>.hwpx</code> の抽出テキストをインデックス化できます。編集は <code>.txt</code>, <code>.md</code>, <code>.markdown</code> のみです。</li>
+        <li>PDF、RTF、DOCX、EPUB、HWPX は読み取り専用のテキスト中心プレビューです。元のレイアウト、画像、複雑な表、OCR のないスキャン PDF は保持または検索できない場合があります。</li>
+      </ul>
+      <h3>広告とプライバシー依頼</h3>
+      <ul>
+        <li>iPad 版では Google AdMob バナー広告が表示される場合があります。macOS 版には AdMob は含まれません。</li>
+        <li>不適切な広告は、可能であればスクリーンショットを添えてサポートへ報告してください。</li>
+        <li>ローカルアプリデータはリセット機能またはアプリ削除で消去できます。開発者管理のサポート記録については、元の問い合わせアドレスから連絡してください。</li>
+      </ul>
+    </section>
+
+    <section class="card" id="es">
+      <h2>Español</h2>
+      <p>Correo de soporte: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
+      <h3>Qué incluir</h3>
+      <ul>
+        <li>Versión de la app, plataforma, idioma seleccionado y modo de Provider.</li>
+        <li>Para Vault Search, indique si estaba activado, qué Vault se conectó y pasos breves de reproducción.</li>
+        <li>Para traducción de documentos, indique tipo de archivo fuente, idioma de destino, formato de salida y texto exacto del error.</li>
+      </ul>
+      <h3>Solución de problemas</h3>
+      <ul>
+        <li>Si no se encuentran archivos compatibles, vuelva a indexar el Vault.</li>
+        <li>Desactive Vault Search para usar la app como chatbot general.</li>
+        <li>Apple On-Device / Foundation Models requiere dispositivo, sistema, región, idioma y ajustes compatibles.</li>
+        <li>Para ChatGPT Browser Sign-In, API compatible con OpenAI o Local API, revise credenciales, endpoint y formato de respuesta.</li>
+        <li>Si se pierde el acceso a archivos tras reiniciar, reconecte el Vault desde Vault Connection.</li>
+      </ul>
+      <h3>Traducción y archivos</h3>
+      <ul>
+        <li>La traducción crea un archivo nuevo y no sobrescribe el original.</li>
+        <li>Antes de empezar puede elegir salida Markdown o texto plano.</li>
+        <li>En iPadOS, las traducciones pueden guardarse primero en la carpeta gestionada por la app por límites de escritura del sistema.</li>
+        <li>La traducción Apple On-Device / Foundation Models procesa segmentos pequeños para reducir problemas de límite de contexto.</li>
+        <li>Se puede indexar texto extraído de <code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code> y <code>.hwpx</code>. La edición se limita a <code>.txt</code>, <code>.md</code> y <code>.markdown</code>.</li>
+        <li>PDF, RTF, DOCX, EPUB y HWPX se abren como vistas de solo lectura centradas en texto. Diseño, imágenes, tablas complejas y PDFs escaneados sin OCR pueden no conservarse o buscarse.</li>
+      </ul>
+      <h3>Anuncios y privacidad</h3>
+      <ul>
+        <li>La versión para iPad puede mostrar banners de Google AdMob. La versión macOS no incluye AdMob.</li>
+        <li>Informe anuncios inapropiados por correo con una captura cuando sea posible.</li>
+        <li>Los datos locales pueden borrarse desde mantenimiento/restablecimiento o eliminando la app. Para registros de soporte gestionados por el desarrollador, escriba desde el correo original.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="de">
+      <h2>Deutsch</h2>
+      <p>Support-E-Mail: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
+      <h3>Anzugeben</h3>
+      <ul>
+        <li>App-Version, Plattform, gewählte Sprache und Provider-Modus.</li>
+        <li>Bei Vault Search: ob die Suche aktiv war, welcher Vault verbunden war und kurze Reproduktionsschritte.</li>
+        <li>Bei Dokumentübersetzung: Quelldateityp, Zielsprache, Ausgabeformat und exakter Fehlertext.</li>
+      </ul>
+      <h3>Fehlerbehebung</h3>
+      <ul>
+        <li>Wenn unterstützte Dateien nicht gefunden werden, indexieren Sie den Vault neu.</li>
+        <li>Für normales Chatbot-Verhalten deaktivieren Sie Vault Search.</li>
+        <li>Apple On-Device / Foundation Models erfordert unterstütztes Gerät, OS, Region, Sprache und Apple-Einstellungen.</li>
+        <li>Bei ChatGPT Browser Sign-In, OpenAI-kompatibler API oder Local API prüfen Sie Zugangsdaten, Endpoint und Antwortformat.</li>
+        <li>Wenn Dateizugriff nach Neustart verloren geht, verbinden Sie den Vault in Vault Connection erneut.</li>
+      </ul>
+      <h3>Übersetzung und Dateien</h3>
+      <ul>
+        <li>Die Übersetzung erstellt eine neue Datei und überschreibt das Original nicht.</li>
+        <li>Vor dem Start können Sie Markdown oder reinen Text als Ausgabe wählen.</li>
+        <li>Unter iPadOS können Übersetzungen wegen Systemlimits zunächst im appverwalteten Ordner gespeichert werden.</li>
+        <li>Apple On-Device / Foundation Models verarbeitet kleine Textsegmente, um Kontextlimit-Probleme zu reduzieren.</li>
+        <li>Extrahierter Text aus <code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code> und <code>.hwpx</code> kann indexiert werden. Bearbeitung ist auf <code>.txt</code>, <code>.md</code> und <code>.markdown</code> beschränkt.</li>
+        <li>PDF, RTF, DOCX, EPUB und HWPX öffnen als schreibgeschützte Textvorschau. Layout, Bilder, komplexe Tabellen und gescannte PDFs ohne OCR bleiben möglicherweise nicht erhalten oder durchsuchbar.</li>
+      </ul>
+      <h3>Werbung und Datenschutz</h3>
+      <ul>
+        <li>Die iPad-Version kann Google AdMob-Banner anzeigen. Die macOS-Version enthält kein AdMob.</li>
+        <li>Unangemessene Anzeigen können möglichst mit Screenshot an den Support gemeldet werden.</li>
+        <li>Lokale Daten können über Wartung/Zurücksetzen oder App-Löschung entfernt werden. Für vom Entwickler verwaltete Supportdaten schreiben Sie von der ursprünglichen E-Mail-Adresse.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="fr">
+      <h2>Français</h2>
+      <p>E-mail d'assistance: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
+      <h3>À inclure</h3>
+      <ul>
+        <li>Version de l'app, plateforme, langue sélectionnée et mode Provider.</li>
+        <li>Pour Vault Search, indiquez s'il était activé, le Vault connecté et de courts pas de reproduction.</li>
+        <li>Pour la traduction, indiquez le type de fichier source, la langue cible, le format de sortie et le texte exact de l'erreur.</li>
+      </ul>
+      <h3>Dépannage</h3>
+      <ul>
+        <li>Si les fichiers compatibles ne sont pas trouvés, relancez l'indexation du Vault.</li>
+        <li>Désactivez Vault Search pour utiliser l'app comme chatbot général.</li>
+        <li>Apple On-Device / Foundation Models nécessite un appareil, OS, région, langue et réglages Apple compatibles.</li>
+        <li>Pour ChatGPT Browser Sign-In, API compatible OpenAI ou Local API, vérifiez identifiants, endpoint et format de réponse.</li>
+        <li>Si l'accès aux fichiers est perdu après relance, reconnectez le Vault depuis Vault Connection.</li>
+      </ul>
+      <h3>Traduction et fichiers</h3>
+      <ul>
+        <li>La traduction crée un nouveau fichier et n'écrase pas l'original.</li>
+        <li>Avant de commencer, vous pouvez choisir une sortie Markdown ou texte brut.</li>
+        <li>Sur iPadOS, les traductions peuvent d'abord être enregistrées dans le dossier géré par l'app en raison des limites d'écriture du système.</li>
+        <li>Apple On-Device / Foundation Models traite de petits segments de texte pour réduire les problèmes de limite de contexte.</li>
+        <li>Le texte extrait de <code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.pdf</code>, <code>.rtf</code>, <code>.docx</code>, <code>.epub</code> et <code>.hwpx</code> peut être indexé. L'édition est limitée à <code>.txt</code>, <code>.md</code> et <code>.markdown</code>.</li>
+        <li>PDF, RTF, DOCX, EPUB et HWPX s'ouvrent en aperçu texte en lecture seule. Mise en page, images, tableaux complexes et PDF scannés sans OCR peuvent ne pas être conservés ou recherchables.</li>
+      </ul>
+      <h3>Publicités et confidentialité</h3>
+      <ul>
+        <li>La version iPad peut afficher des bannières Google AdMob. La version macOS n'inclut pas AdMob.</li>
+        <li>Signalez les publicités inappropriées par e-mail avec une capture si possible.</li>
+        <li>Les données locales peuvent être effacées via maintenance/réinitialisation ou en supprimant l'app. Pour les dossiers d'assistance gérés par le développeur, écrivez depuis l'e-mail initial.</li>
       </ul>
     </section>
   </main>
